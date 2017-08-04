@@ -37,9 +37,11 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'apps.user'
+    'apps.user',
+    'apps.store'
 ]
 
+# custom user model
 AUTH_USER_MODEL = 'user.User'
 
 MIDDLEWARE = [
