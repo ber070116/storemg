@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Storemg</title>
+    <!-- foundation css -->
+    <link rel="stylesheet" href="{{ static('src/foundation-6.4.1-complete/css/foundation.min.css') }}">
+    <!-- foundation css -->
+
+    <!-- foundation js -->
+    <script src="{{ static('src/foundation-6.4.1-complete/js/vendor/jquery.js') }}"></script>
+    <script src="{{ static('src/foundation-6.4.1-complete/js/vendor/what-input.js') }}"></script>
+    <script src="{{ static('src/foundation-6.4.1-complete/js/vendor/foundation.min.js') }}"></script>
+    <script>
+      $(document).foundation();
+    </script>
+    <!-- foundation js -->
+</head>
+<body>
+    {% block body %}
+    {% endblock %}
+</body>
+</html>

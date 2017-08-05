@@ -1,0 +1,12 @@
+{% extends 'base/body.html' %}
+{% block body %}
+    <form action="{{ url('user:user_login') }}" method="POST">
+        <input type="text" name="username" placeholder="username or email" />
+        <input type="password" name="password" />
+        <input type="submit" value="Entrar"/>
+        <input type="hidden" name="csrfmiddlewaretoken" value="{{ csrf_token }}">
+    </form>
+
+    {{ request.user.is_authenticated }}
+    {{ request.user.username }}
+{% endblock %}

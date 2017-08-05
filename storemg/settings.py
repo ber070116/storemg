@@ -58,6 +58,18 @@ ROOT_URLCONF = 'storemg.urls'
 
 TEMPLATES = [
     {
+        'BACKEND': 'django.template.backends.jinja2.Jinja2',
+        'APP_DIRS': True,
+        'DIRS': [os.path.join(BASE_DIR, 'storemg/templates/'),
+                 os.path.join(BASE_DIR, 'apps/user/templates/'),
+                 ],
+        'OPTIONS': {
+            'environment': 'storemg.jinja2.environment',
+            'auto_reload': DEBUG,
+            'autoescape': True,
+        },
+    },
+    {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
         'DIRS': [],
         'APP_DIRS': True,
@@ -134,3 +146,7 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/1.11/howto/static-files/
 
 STATIC_URL = '/static/'
+
+STATICFILES_DIRS = [
+    "/home/brandomhk/workspace/storemg/storemg/static/"
+]

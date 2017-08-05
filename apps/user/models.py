@@ -6,7 +6,7 @@ from django.contrib.auth.models import (
 
 
 class UserManager(BaseUserManager):
-    def create_user(self, user, email, date_of_birth, password):
+    def create_user(self, username, email, date_of_birth, password):
         """
         Creates and saves a User with the given email, date of
         birth and password.
@@ -18,6 +18,7 @@ class UserManager(BaseUserManager):
             raise ValueError('User must have an password')
 
         user = self.model(
+            username=username,
             email=self.normalize_email(email),
             date_of_birth=date_of_birth,
         )
