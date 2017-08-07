@@ -1,0 +1,8 @@
+{% extends 'base/body.html' %}
+{% block body %}
+
+    hola {{ request.user.username }}
+    {{ request.user.is_authenticated }}
+    <br />
+    <p>stores: {{ stores[0].name }}</p>
+{% endblock %}

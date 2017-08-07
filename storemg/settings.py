@@ -62,7 +62,7 @@ TEMPLATES = [
         'APP_DIRS': True,
         'DIRS': [os.path.join(BASE_DIR, 'storemg/templates/'),
                  os.path.join(BASE_DIR, 'apps/user/templates/'),
-                 ],
+                 os.path.join(BASE_DIR, 'apps/store/templates/')],
         'OPTIONS': {
             'environment': 'storemg.jinja2.environment',
             'auto_reload': DEBUG,

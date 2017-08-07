@@ -12,7 +12,7 @@ class LoginView(LoginView):
     template_name = 'user/login.html'
 
     def post(self, request, *args, **kwargs):
-        # get the request sent for method post to login user
+        """get the request sent for method post to login user"""
         username = request.POST['username']
         password = request.POST['password']
 
